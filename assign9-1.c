@@ -24,7 +24,7 @@ void load_data_file_binary(char filename[],int *data,int *count){
 	int size;
 	fp = fopen(filename,"rb");
 	if(fp!=NULL){
-		size = 120000;
+		size = 10000;
 		*count=fread(data,sizeof(int),size,fp);
 		fclose(fp);
 		printf("Load file %s %d records complete\n",filename,*count);
